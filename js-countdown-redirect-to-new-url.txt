@@ -1,0 +1,35 @@
+<mt:Ignore>旧ページからリダイレクトさせるスクリプト</mt:Ignore>
+<mt:Ignore>ページのURLが変わったことを知らせたいので、旧ページを表示させてからリダイレクトさせる。</mt:Ignore>
+<mt:Ignore>リダイレクトまでのカウントダウンの秒数は1日に1秒づつ減っていく。</mt:Ignore>
+
+// アクセスした日
+var startDateTime = new Date();
+
+// endDateTimeにカウントダウンをさせる最後の日を設定する
+var endDateTime = new Date("2018/03/30 00:00:00");
+
+// アクセスした日（startDateTime）からendDateTimeに設定した日までの残り時間
+var left = endDateTime - startDateTime;
+
+// 1日のミリ秒
+var a_day = 24 * 60 * 60 * 1000;
+
+// 期限から現在までの『残時間の日の部分』
+var d = Math.floor(left / a_day);
+
+var start=new Date();
+start=Date.parse(start)/1000;
+
+  function count_down(){
+    var now=new Date();
+    now=Date.parse(now)/1000;
+    var x=parseInt(d-(now-start),10);
+
+    $("#TimeLeft").text(x);
+    if(x>0){
+      timerID=setTimeout("count_down()", 100)
+    }else{
+      location.href = redirectURL
+    }
+  }
+  window.setTimeout('count_down()',100);
