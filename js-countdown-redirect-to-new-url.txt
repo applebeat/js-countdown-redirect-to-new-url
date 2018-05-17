@@ -1,6 +1,6 @@
 <mt:Ignore>旧ページからリダイレクトさせるスクリプト</mt:Ignore>
 <mt:Ignore>ページのURLが変わったことを知らせたいので、旧ページを表示させてからリダイレクトさせる。</mt:Ignore>
-<mt:Ignore>リダイレクトまでのカウントダウンの秒数は1日に1秒づつ減っていく。</mt:Ignore>
+<mt:Ignore>リダイレクトまでのカウントダウンの秒数は1日に1秒ずつ減っていく。</mt:Ignore>
 
 // アクセスした日
 var startDateTime = new Date();
