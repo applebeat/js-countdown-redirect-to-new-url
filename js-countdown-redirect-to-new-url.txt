@@ -23,7 +23,7 @@ start=Date.parse(start)/1000;
   function count_down(){
     var now=new Date();
     now=Date.parse(now)/1000;
-    var x=parseInt(d-(now-start),10);
+    var x=parseInt(d-(now-start),10)+1;
 
     $("#TimeLeft").text(x);
     if(x>0){
