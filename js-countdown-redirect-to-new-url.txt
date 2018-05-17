@@ -14,7 +14,7 @@ var left = endDateTime - startDateTime;
 // 1日のミリ秒
 var a_day = 24 * 60 * 60 * 1000;
 
-// 期限から現在までの『残時間の日の部分』
+// 期限から現在までの『残時間の日にちの部分』
 var d = Math.floor(left / a_day);
 
 var start=new Date();
